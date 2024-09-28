@@ -17,7 +17,7 @@ function Student(name, subject, grade = 0) {
 }
 
 // creating student with new keyword
-let student1 = new Student('John Doe', 'Calculus');
+let student1 = new Student('Sam Altman', 'Calculus');
 
 // uptading grade 
 student1.study(3);
