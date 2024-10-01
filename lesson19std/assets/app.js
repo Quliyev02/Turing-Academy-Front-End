@@ -5,6 +5,9 @@ function Student(name, subject, grade = 0) {
 
     this.study = function(hours) {
         this.grade += hours * 5;
+        if (this.grade > 100) {
+            this.grade = 100; // stucking grade at 100
+        }
     };
 
     this.getGrade = function() {
@@ -16,15 +19,27 @@ function Student(name, subject, grade = 0) {
     };
 }
 
-// creating student with new keyword
-let student1 = new Student('Sam Altman', 'Calculus');
+// Creating students with the new keyword
+let student1 = new Student('John Doe', 'Calculus');
+let student2 = new Student('Jane Roe', 'Computer Architecture');
+let student3 = new Student('Mark Zuckerberg', 'Automata Theory');
 
-// uptading grade 
-student1.study(3);
+// update grade 
+student1.study(3); 
+student2.study(8);  
+student3.study(34);  
 
-// changing subject
+// change subject
 student1.changeSubject('Operating Systems');
+student2.changeSubject('Discrete Math');
+student3.changeSubject('Advanced Algorithms');
 
-// console log for display results
+// testing results
 console.log(student1.getGrade()); // op 15
 console.log(student1.subject); // op operating systems
+
+console.log(student2.getGrade()); // op 40
+console.log(student2.subject); // op discrete math
+
+console.log(student3.getGrade()); //op100 stucked at 100 cause the if statement
+console.log(student3.subject) // op automata theory
