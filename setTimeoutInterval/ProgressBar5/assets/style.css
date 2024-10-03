@@ -1,0 +1,14 @@
+#progressContainer {
+    width: 100%;
+    background-color: #e0e0e0; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    overflow: hidden; /* Ensures no overflow */
+}
+
+#progressBar {
+    width: 0; 
+    height: 30px; 
+    background-color: #76c7c0; 
+    transition: width 0.1s; /* Smooth transition for width change */
+}
